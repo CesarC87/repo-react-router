@@ -1,20 +1,22 @@
 import './App.css';
-import {Routes, Route, Link} from 'react-router-dom';
+import React, {Routes, Route, Link, BrowserRouter} from 'react-router-dom';
 import Home from './Componentes/Home';
-import About from './Componentes/About';
+import Navbar from './Componentes/Navbar';
+import Cabecera from './Componentes/Cabecera';
 
 function App() {
   return (
     <div className="App">
-    
+    <BrowserRouter>
       <h1>MENU</h1>
       <Navbar /> 
-      <Cabecera />
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/About" element={<Cabecera />} />
       </Routes>
+    
+    </BrowserRouter>
 
     </div>
   );
